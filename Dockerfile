@@ -4,6 +4,7 @@ FROM ubuntu:xenial-20200114
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
                     curl \
+                    ca-certificates \
                     file \
                     libquadmath0 \
                     tclsh \
