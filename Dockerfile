@@ -1,4 +1,5 @@
-FROM python:2.7.18-slim-buster
+# Use Ubuntu 16.04 LTS
+FROM ubuntu:xenial-20200114
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -34,6 +35,3 @@ ENV OS="Linux" \
     FSLTCLSH="/usr/bin/tclsh" \
     FSLWISH="/usr/bin/wish" \
     PATH="$FSLDIR/bin:$PATH"
-
-# COPY files/fslinstaller.py /tmp/fslinstaller.py
-# RUN python /tmp/fslinstaller.py -f /tmp/fsl-6.0.4-centos7_64.tar.gz -p -D -d /opt/fsl-6.0.4
